@@ -79,30 +79,24 @@ replace (Puzzle grid) (x, y) v =
 
 solve :: Puzzle -> Maybe Puzzle
 solve puzzle =
-  let b = firstBlank puzzle
-  in 
-    case b of
-      Nothing -> Just puzzle
-      Just coords -> 
-        let p = possibleValues puzzle coords
-        in 
-          case length p of
-            0 -> Nothing
-            _ -> 
-              let candidates = replace puzzle coords <$> p 
-                  solutions = catMaybes $ solve <$> candidates
-              in 
-                case solutions of
-                  [] -> Nothing
-                  (x:xs) -> Just x
+  case firstBlank puzzle of
+    Nothing -> Just puzzle
+    Just coords -> 
+      case possibleValues puzzle coords of
+        [] -> Nothing 
+        p -> 
+          let candidates = replace puzzle coords <$> p 
+              solutions = catMaybes $ solve <$> candidates
+          in 
+            case solutions of
+              [] -> Nothing
+              (x:xs) -> Just x
 
 firstBlank :: Puzzle -> Maybe (Int, Int)
 firstBlank puzzle =
-  let blanks = [ (x, y) | x <- [0..8], y <- [0..8], valueAt puzzle (x, y) == Nothing ]
-  in 
-    case blanks of
-      [] -> Nothing
-      (x:xs) -> Just x
+  case [ (x, y) | x <- [0..8], y <- [0..8], valueAt puzzle (x, y) == Nothing ] of
+    [] -> Nothing
+    (x:xs) -> Just x
 
 depipe line =
   filter (\c -> c /= '|') line
@@ -116,13 +110,12 @@ convert =
 
 parse = do
   d <- readFile "data/puzzle.txt"
-  let l = (convert . depipe) <$> lines d
-  return $ Puzzle l
+  return $ Puzzle $ (convert . depipe) <$> lines d
 
 solveFromFile = do
   puzzle <- parse
   return $
     case solve puzzle of
-      Nothing -> testPuzzle
+      Nothing -> puzzle
       Just p -> p
 
