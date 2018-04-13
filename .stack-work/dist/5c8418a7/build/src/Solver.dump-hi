@@ -1,0 +1,831 @@
+
+==================== FINAL INTERFACE ====================
+2018-04-13 19:12:12.4199088 UTC
+
+interface sudoku-haskell-0.1.0.0-JpweTu7Vzg06VMSqVO2S8V:Solver 8022
+  interface hash: 3c584fc0c33b69e73999475722c5087a
+  ABI hash: 6bc70c2f8c0120f90c8b3c0329a773e0
+  export-list hash: fda743058cb244759d966b61faafedab
+  orphan hash: d844164edfd371c11cb793fc3d83d4da
+  flag hash: 984c41e4bf6a2e470cbc007292eeaee5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Solver.allValues
+  Solver.convert
+  Solver.firstBlank
+  Solver.parse
+  Solver.possibleValues
+  Solver.replace
+  Solver.showCell
+  Solver.showLine
+  Solver.solve
+  Solver.solveFromFile
+  Solver.usedInCol
+  Solver.usedInQuad
+  Solver.usedInRow
+  Solver.valueAt
+  Solver.Puzzle{Solver.Puzzle}
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0*
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Set.Internal
+import  -/  base-4.10.1.0:Data.Char 9dba16913a6ef0862b65389e7f361a31
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:Data.Functor b59a97e639e05373a94999f9bb899676
+import  -/  base-4.10.1.0:Data.List e5312e282ad78d8152090e079f862b53
+import  -/  base-4.10.1.0:Data.Maybe f51a1c24c4c11dca22ee9c2ea0071a10
+import  -/  base-4.10.1.0:Data.OldList fdea655c7bec488a3994df222c677ab7
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.List 1bb0adf79553530dc898796596e53188
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:GHC.Real 183566a07f0c201dd54a6bc28c33ed14
+import  -/  base-4.10.1.0:GHC.Show 927ef590f679632bf94869e8018e5b48
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  base-4.10.1.0:System.IO 1fb8f1d116df69c8750950ac088a90e6
+import  -/  containers-0.5.10.2:Data.Set 7773c3ea4eb5302461702acb1f1cb916
+import  -/  containers-0.5.10.2:Data.Set.Internal 2c0ebe68524799feb2ddd690bca723f0
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+8d4bdadb91dc777f24f1a2059b5931d8
+  $fShowPuzzle :: GHC.Show.Show Solver.Puzzle
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Solver.Puzzle
+                  Solver.$fShowPuzzle_$cshowsPrec
+                  Solver.$fShowPuzzle_$cshow
+                  Solver.$fShowPuzzle_$cshowList -}
+8d4bdadb91dc777f24f1a2059b5931d8
+  $fShowPuzzle1 ::
+    Solver.Puzzle -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Solver.Puzzle) (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Solver.$fShowPuzzle_$cshow x))
+                   s) -}
+b8e23a19aa0207485b8d9a802f155a25
+  $fShowPuzzle2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Solver.$fShowPuzzle3) -}
+b5bc1401831b3ddca7751007b3561546
+  $fShowPuzzle3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\n"#) -}
+8d4bdadb91dc777f24f1a2059b5931d8
+  $fShowPuzzle_$cshow :: Solver.Puzzle -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Solver.Puzzle) ->
+                 case GHC.Base.map
+                        @ [GHC.Base.Maybe GHC.Types.Int]
+                        @ [GHC.Types.Char]
+                        Solver.showLine
+                        ds `cast` (Solver.N:Puzzle[0]) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs
+                   -> Solver.$fShowPuzzle_go
+                        (GHC.Types.:
+                           @ [GHC.Types.Char]
+                           x
+                           (Data.OldList.prependToAll
+                              @ [GHC.Types.Char]
+                              Solver.$fShowPuzzle2
+                              xs)) }) -}
+8d4bdadb91dc777f24f1a2059b5931d8
+  $fShowPuzzle_$cshowList :: [Solver.Puzzle] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Solver.Puzzle]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Solver.Puzzle Solver.$fShowPuzzle1 ls s) -}
+8d4bdadb91dc777f24f1a2059b5931d8
+  $fShowPuzzle_$cshowsPrec ::
+    GHC.Types.Int -> Solver.Puzzle -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Solver.Puzzle)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Solver.$fShowPuzzle_$cshow x))
+                   s) -}
+a5cdad820cb36546b35afd429e7ad05d
+  $fShowPuzzle_go :: [[GHC.Types.Char]] -> [GHC.Types.Char]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+f1f6ccc2b6574be6bcd4284421957173
+  $s$wsplitS ::
+    GHC.Types.Int
+    -> Data.Set.Internal.Set GHC.Types.Int
+    -> (# Data.Set.Internal.Set GHC.Types.Int,
+          Data.Set.Internal.Set GHC.Types.Int #)
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>, Inline: [~] -}
+0d11359921c9f70f70a21c5a425304e4
+  $sdifference ::
+    Data.Set.Internal.Set GHC.Types.Int
+    -> Data.Set.Internal.Set GHC.Types.Int
+    -> Data.Set.Internal.Set GHC.Types.Int
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [~] -}
+28d1f215f3240ccc870ffa2688cce140
+  $sfromList ::
+    [GHC.Types.Int] -> Data.Set.Internal.Set GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Int]) ->
+                 case ds of wild {
+                   [] -> Data.Set.Internal.Tip @ GHC.Types.Int
+                   : x ds1
+                   -> case ds1 of wild1 {
+                        []
+                        -> case x of dt { GHC.Types.I# ipv ->
+                           Data.Set.Internal.Bin
+                             @ GHC.Types.Int
+                             1#
+                             dt
+                             (Data.Set.Internal.Tip @ GHC.Types.Int)
+                             (Data.Set.Internal.Tip @ GHC.Types.Int) }
+                        : ipv ipv1
+                        -> case x of wild2 { GHC.Types.I# x1 ->
+                           case ipv of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 y) of wild4 {
+                             GHC.Types.False
+                             -> Solver.$wgo3
+                                  1#
+                                  (Data.Set.Internal.Bin
+                                     @ GHC.Types.Int
+                                     1#
+                                     wild2
+                                     (Data.Set.Internal.Tip @ GHC.Types.Int)
+                                     (Data.Set.Internal.Tip @ GHC.Types.Int))
+                                  wild1
+                             GHC.Types.True
+                             -> Solver.$sfromList_go4
+                                  (Data.Set.Internal.Bin
+                                     @ GHC.Types.Int
+                                     1#
+                                     wild2
+                                     (Data.Set.Internal.Tip @ GHC.Types.Int)
+                                     (Data.Set.Internal.Tip @ GHC.Types.Int))
+                                  wild1 } } } } }) -}
+8afa00826bfb6abdf79ca5810b6395eb
+  $sfromList_go4 ::
+    Data.Set.Internal.Set GHC.Types.Int
+    -> [GHC.Types.Int] -> Data.Set.Internal.Set GHC.Types.Int
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+d6f9ba44483cc4165dc1c532fb169c89
+  $tc'Puzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3555115847931456658##
+                   17916202621716146004##
+                   Solver.$trModule
+                   Solver.$tc'Puzzle2
+                   0#
+                   Solver.$tc'Puzzle1) -}
+e676b0802b7de5dac41b935a9c2006aa
+  $tc'Puzzle1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+86d1c7af657f9da6a1f44f4c14e68fe2
+  $tc'Puzzle2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$tc'Puzzle3) -}
+6407f78348ba6a84c367da392ede7b4d
+  $tc'Puzzle3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Puzzle"#) -}
+b6f2a2c2454e05e12dfa7524d20973e2
+  $tcPuzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8025449818266280419##
+                   5501265301327819342##
+                   Solver.$trModule
+                   Solver.$tcPuzzle1
+                   0#
+                   GHC.Types.krep$*) -}
+2f444895d1e2dc113220c7ce1aa9bbab
+  $tcPuzzle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$tcPuzzle2) -}
+32d29d4d8fc69dc2823e1c279b270781
+  $tcPuzzle2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Puzzle"#) -}
+b388289fd4b14456f414b37f48256735
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Solver.$trModule3
+                   Solver.$trModule1) -}
+9fc77454b351b04cc2b462838797ba63
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$trModule2) -}
+12ed83fb3f90731bf03591364bd19d2c
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Solver"#) -}
+00ae6b5f5026616f01f06c9c501b29d1
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$trModule4) -}
+cb564d1da6225302882b4b0a05dced21
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sudoku-haskell-0.1.0.0-JpweTu7Vzg06VMSqVO2S8V"#) -}
+a5a3ce1d3adcba6abe26bfcd53cc8760
+  $w$sgo3 ::
+    GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> Data.Set.Internal.Set GHC.Types.Int
+    -> Data.Set.Internal.Set GHC.Types.Int
+  {- Arity: 3, Strictness: <L,U><L,U><S,1*U>, Inline: [0] -}
+0a34d7517b30458b1f12a890e9d055bd
+  $wgo3 ::
+    GHC.Prim.Int#
+    -> Data.Set.Internal.Set GHC.Types.Int
+    -> [GHC.Types.Int]
+    -> Data.Set.Internal.Set GHC.Types.Int
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+64c8576a8aa92d271b670057411f4d66
+  $wpossibleValues ::
+    Solver.Puzzle -> GHC.Prim.Int# -> GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 3, Strictness: <L,U><S,U><L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Solver.Puzzle)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int) ->
+                 let {
+                   $j :: [GHC.Types.Int] <join 0>
+                   = Data.Set.Internal.$fDataSet_go
+                       @ GHC.Types.Int
+                       (GHC.Types.[] @ GHC.Types.Int)
+                       (Solver.$sdifference
+                          Solver.allValues
+                          (case ww1 of ww2 { GHC.Types.I# ww3 ->
+                           Solver.$sfromList
+                             (GHC.Base.++
+                                @ GHC.Types.Int
+                                (Data.Maybe.catMaybes1
+                                   @ GHC.Types.Int
+                                   (GHC.List.$w!!
+                                      @ [GHC.Base.Maybe GHC.Types.Int]
+                                      w `cast` (Solver.N:Puzzle[0])
+                                      ww3))
+                                (GHC.Base.++
+                                   @ GHC.Types.Int
+                                   (Data.Maybe.catMaybes1
+                                      @ GHC.Types.Int
+                                      (GHC.Base.map
+                                         @ [GHC.Base.Maybe GHC.Types.Int]
+                                         @ (GHC.Base.Maybe GHC.Types.Int)
+                                         (\ (l :: [GHC.Base.Maybe GHC.Types.Int]) ->
+                                          GHC.List.$w!! @ (GHC.Base.Maybe GHC.Types.Int) l ww)
+                                         w `cast` (Solver.N:Puzzle[0])))
+                                   (Solver.$wusedInQuad w ww ww2))) }))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 0#) of wild {
+                   GHC.Types.False -> $j
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<# ww 10#) of wild1 {
+                        GHC.Types.False -> $j
+                        GHC.Types.True
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x 0#) of wild3 {
+                             GHC.Types.False -> $j
+                             GHC.Types.True
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# x 10#) of wild4 {
+                                  GHC.Types.False -> $j
+                                  GHC.Types.True
+                                  -> case GHC.List.$w!!
+                                            @ (GHC.Base.Maybe GHC.Types.Int)
+                                            (GHC.List.$w!!
+                                               @ [GHC.Base.Maybe GHC.Types.Int]
+                                               w `cast` (Solver.N:Puzzle[0])
+                                               x)
+                                            ww of wild5 {
+                                       GHC.Base.Nothing -> $j
+                                       GHC.Base.Just n
+                                       -> GHC.Types.[] @ GHC.Types.Int } } } } } }) -}
+a8b9c2a1aecdc7c2934029c21be8c660
+  $wreplace ::
+    Solver.Puzzle
+    -> GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Int -> Solver.Puzzle
+  {- Arity: 4, Strictness: <S,1*U><L,U(U)><L,U(U)><L,U>, Inline: [0],
+     Unfolding: (\ (w :: Solver.Puzzle)
+                   (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int) ->
+                 let {
+                   lvl :: GHC.Base.Maybe GHC.Types.Int
+                   = GHC.Base.Just @ GHC.Types.Int w1
+                 } in
+                 letrec {
+                   go2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+                          -> [GHC.Types.Int] -> [[GHC.Base.Maybe GHC.Types.Int]]
+                     {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                   = \ (ds :: [[GHC.Base.Maybe GHC.Types.Int]])
+                       (_ys :: [GHC.Types.Int]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ [GHC.Base.Maybe GHC.Types.Int]
+                       : ipv ipv1
+                       -> case _ys of wild1 {
+                            [] -> GHC.Types.[] @ [GHC.Base.Maybe GHC.Types.Int]
+                            : ipv2 ipv3
+                            -> GHC.Types.:
+                                 @ [GHC.Base.Maybe GHC.Types.Int]
+                                 (let {
+                                    lvl1 :: GHC.Types.Bool
+                                    = case ipv2 of wild2 { GHC.Types.I# x ->
+                                      case ww1 of wild3 { GHC.Types.I# y ->
+                                      GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# x y) } }
+                                  } in
+                                  letrec {
+                                    go1 :: [GHC.Base.Maybe GHC.Types.Int]
+                                           -> [GHC.Types.Int] -> [GHC.Base.Maybe GHC.Types.Int]
+                                      {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                                    = \ (ds1 :: [GHC.Base.Maybe GHC.Types.Int])
+                                        (_ys1 :: [GHC.Types.Int]) ->
+                                      case ds1 of wild2 {
+                                        [] -> GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int)
+                                        : ipv4 ipv5
+                                        -> case _ys1 of wild3 {
+                                             [] -> GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int)
+                                             : ipv6 ipv7
+                                             -> GHC.Types.:
+                                                  @ (GHC.Base.Maybe GHC.Types.Int)
+                                                  (case ipv6 of wild4 { GHC.Types.I# x ->
+                                                   case ww of wild5 { GHC.Types.I# y ->
+                                                   case GHC.Prim.tagToEnum#
+                                                          @ GHC.Types.Bool
+                                                          (GHC.Prim.==# x y) of wild6 {
+                                                     GHC.Types.False -> ipv4
+                                                     GHC.Types.True
+                                                     -> case lvl1 of wild7 {
+                                                          GHC.Types.False -> ipv4
+                                                          GHC.Types.True -> lvl } } } })
+                                                  (go1 ipv5 ipv7) } }
+                                  } in
+                                  go1 ipv Solver.replace1)
+                                 (go2 ipv1 ipv3) } }
+                 } in
+                 (go2 w `cast` (Solver.N:Puzzle[0]) Solver.replace1)
+                   `cast`
+                 (Sym (Solver.N:Puzzle[0]))) -}
+1fd625f8f0a54abf6468382e99b776d3
+  $wusedInQuad ::
+    Solver.Puzzle -> GHC.Prim.Int# -> GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 3, Strictness: <L,U><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Solver.Puzzle)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int) ->
+                 case GHC.Classes.divInt# ww 3# of ww4 { DEFAULT ->
+                 let {
+                   x :: GHC.Prim.Int# = GHC.Prim.*# ww4 3#
+                 } in
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.+# x 2#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># x y) of wild {
+                   GHC.Types.False
+                   -> case ww1 of ww2 { GHC.Types.I# ww3 ->
+                      case GHC.Classes.divInt# ww3 3# of ww5 { DEFAULT ->
+                      let {
+                        x1 :: GHC.Prim.Int# = GHC.Prim.*# ww5 3#
+                      } in
+                      let {
+                        lvl :: [GHC.Types.Int] = GHC.Enum.eftInt x1 (GHC.Prim.+# x1 2#)
+                      } in
+                      letrec {
+                        go :: GHC.Prim.Int# -> [GHC.Base.Maybe GHC.Types.Int]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x2 :: GHC.Prim.Int#) ->
+                          let {
+                            z :: [GHC.Base.Maybe GHC.Types.Int]
+                            = case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.==# x2 y) of wild1 {
+                                GHC.Types.False -> go (GHC.Prim.+# x2 1#)
+                                GHC.Types.True -> GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int) }
+                          } in
+                          letrec {
+                            go1 :: [GHC.Types.Int] -> [GHC.Base.Maybe GHC.Types.Int]
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds :: [GHC.Types.Int]) ->
+                              case ds of wild1 {
+                                [] -> z
+                                : y1 ys
+                                -> GHC.Types.:
+                                     @ (GHC.Base.Maybe GHC.Types.Int)
+                                     (Solver.$wvalueAt w x2 y1)
+                                     (go1 ys) }
+                          } in
+                          go1 lvl
+                      } in
+                      Data.Maybe.catMaybes1 @ GHC.Types.Int (go x) } }
+                   GHC.Types.True -> Solver.possibleValues1 } }) -}
+d2ad9b83846e1ea685a2c6b9aaa09cd6
+  $wvalueAt ::
+    Solver.Puzzle
+    -> GHC.Prim.Int# -> GHC.Types.Int -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 3, Strictness: <L,1*U><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Solver.Puzzle)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 0#) of wild {
+                   GHC.Types.False -> GHC.Base.Nothing @ GHC.Types.Int
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<# ww 10#) of wild1 {
+                        GHC.Types.False -> GHC.Base.Nothing @ GHC.Types.Int
+                        GHC.Types.True
+                        -> case ww1 of wild2 { GHC.Types.I# x ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x 0#) of wild3 {
+                             GHC.Types.False -> GHC.Base.Nothing @ GHC.Types.Int
+                             GHC.Types.True
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# x 10#) of wild4 {
+                                  GHC.Types.False -> GHC.Base.Nothing @ GHC.Types.Int
+                                  GHC.Types.True
+                                  -> GHC.List.$w!!
+                                       @ (GHC.Base.Maybe GHC.Types.Int)
+                                       (GHC.List.$w!!
+                                          @ [GHC.Base.Maybe GHC.Types.Int]
+                                          w `cast` (Solver.N:Puzzle[0])
+                                          x)
+                                       ww } } } } }) -}
+8d4bdadb91dc777f24f1a2059b5931d8
+  newtype Puzzle = Puzzle [[GHC.Base.Maybe GHC.Types.Int]]
+d3e89d75e7be5baccce89be2845573fa
+  allValues :: Data.Set.Internal.Set GHC.Types.Int
+  {- Unfolding: (Solver.$sfromList (GHC.Enum.eftInt 1# 9#)) -}
+5d8d66fdc066b91b8475a000ed7e0b26
+  convert :: [GHC.Types.Char] -> [GHC.Base.Maybe GHC.Types.Int]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.map
+                   @ GHC.Types.Char
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   Solver.convert1) -}
+b1a8a8441ac4bd7046fac0159f88c717
+  convert1 :: GHC.Types.Char -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 1, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (c :: GHC.Types.Char) ->
+                 case c of wild { GHC.Types.C# ds ->
+                 case ds of ds1 {
+                   DEFAULT
+                   -> GHC.Base.Just
+                        @ GHC.Types.Int
+                        (case Data.Char.$wdigitToInt ds1 of ww2 { DEFAULT ->
+                         GHC.Types.I# ww2 })
+                   '.'# -> GHC.Base.Nothing @ GHC.Types.Int } }) -}
+c798c9b2eb32a91596aef9c54e150f05
+  firstBlank ::
+    Solver.Puzzle -> GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (puzzle :: Solver.Puzzle) ->
+                 letrec {
+                   go :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x :: GHC.Prim.Int#) ->
+                     let {
+                       lvl :: GHC.Types.Int = GHC.Types.I# x
+                     } in
+                     let {
+                       n :: [(GHC.Types.Int, GHC.Types.Int)]
+                       = case x of wild {
+                           DEFAULT -> go (GHC.Prim.+# wild 1#)
+                           8# -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }
+                     } in
+                     let {
+                       lvl1 :: GHC.Types.Bool
+                       = GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.>=# x 0#)
+                     } in
+                     let {
+                       lvl2 :: GHC.Types.Bool
+                       = GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<# x 10#)
+                     } in
+                     letrec {
+                       go1 :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+                         {- Arity: 1, Strictness: <L,U> -}
+                       = \ (x1 :: GHC.Prim.Int#) ->
+                         case lvl1 of wild {
+                           GHC.Types.False
+                           -> GHC.Types.:
+                                @ (GHC.Types.Int, GHC.Types.Int)
+                                (lvl, GHC.Types.I# x1)
+                                (case x1 of wild1 {
+                                   DEFAULT -> go1 (GHC.Prim.+# wild1 1#) 8# -> n })
+                           GHC.Types.True
+                           -> case lvl2 of wild1 {
+                                GHC.Types.False
+                                -> GHC.Types.:
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     (lvl, GHC.Types.I# x1)
+                                     (case x1 of wild2 {
+                                        DEFAULT -> go1 (GHC.Prim.+# wild2 1#) 8# -> n })
+                                GHC.Types.True
+                                -> case GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim.>=# x1 0#) of wild2 {
+                                     GHC.Types.False
+                                     -> GHC.Types.:
+                                          @ (GHC.Types.Int, GHC.Types.Int)
+                                          (lvl, GHC.Types.I# x1)
+                                          (case x1 of wild3 {
+                                             DEFAULT -> go1 (GHC.Prim.+# wild3 1#) 8# -> n })
+                                     GHC.Types.True
+                                     -> case GHC.Prim.tagToEnum#
+                                               @ GHC.Types.Bool
+                                               (GHC.Prim.<# x1 10#) of wild3 {
+                                          GHC.Types.False
+                                          -> GHC.Types.:
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               (lvl, GHC.Types.I# x1)
+                                               (case x1 of wild4 {
+                                                  DEFAULT -> go1 (GHC.Prim.+# wild4 1#) 8# -> n })
+                                          GHC.Types.True
+                                          -> case GHC.List.$w!!
+                                                    @ (GHC.Base.Maybe GHC.Types.Int)
+                                                    (GHC.List.$w!!
+                                                       @ [GHC.Base.Maybe GHC.Types.Int]
+                                                       puzzle `cast` (Solver.N:Puzzle[0])
+                                                       x1)
+                                                    x of wild4 {
+                                               GHC.Base.Nothing
+                                               -> GHC.Types.:
+                                                    @ (GHC.Types.Int, GHC.Types.Int)
+                                                    (lvl, GHC.Types.I# x1)
+                                                    (case x1 of wild5 {
+                                                       DEFAULT -> go1 (GHC.Prim.+# wild5 1#)
+                                                       8# -> n })
+                                               GHC.Base.Just a1
+                                               -> case x1 of wild5 {
+                                                    DEFAULT -> go1 (GHC.Prim.+# wild5 1#)
+                                                    8# -> n } } } } } }
+                     } in
+                     go1 0#
+                 } in
+                 case go 0# of wild {
+                   [] -> GHC.Base.Nothing @ (GHC.Types.Int, GHC.Types.Int)
+                   : x xs -> GHC.Base.Just @ (GHC.Types.Int, GHC.Types.Int) x }) -}
+de697608dee4abf48db99e7923041e6e
+  parse :: GHC.Types.IO Solver.Puzzle
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Solver.parse1 `cast` (Sym (GHC.Types.N:IO[0] <Solver.Puzzle>_R)) -}
+74b1668299026769f211380c2fb6aef2
+  parse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Solver.Puzzle #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Solver.parse2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv2 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv2
+                        ipv of ds2 { (#,#) ipv1 ipv3 ->
+                 (# ipv1,
+                    (GHC.Base.map
+                       @ [GHC.Types.Char]
+                       @ [GHC.Base.Maybe GHC.Types.Int]
+                       Solver.convert
+                       (Data.OldList.lines ipv3))
+                      `cast`
+                    (Sym (Solver.N:Puzzle[0])) #) } }) -}
+ccffae51097c597a46822e8263696028
+  parse2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Solver.parse3) -}
+e609fe4ea003d928e6db40eeac83eb92
+  parse3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("data/puzzle.txt"#) -}
+5b384c036198f938baaaaa3e8d42cb50
+  possibleValues ::
+    Solver.Puzzle -> (GHC.Types.Int, GHC.Types.Int) -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <L,U><S(S(S)L),1*U(1*U(U),U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Solver.Puzzle) (w1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Solver.$wpossibleValues w ww4 ww2 } }) -}
+93a0a407507c6abff5c1c74bfda85eee
+  possibleValues1 :: [GHC.Types.Int]
+  {- Unfolding: (Data.Maybe.catMaybes1
+                   @ GHC.Types.Int
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+d298f27f8b37a6a595141dc9291123b9
+  replace ::
+    Solver.Puzzle
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Int -> Solver.Puzzle
+  {- Arity: 3, Strictness: <S,1*U><S,1*U(U(U),U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Solver.Puzzle)
+                   (w1 :: (GHC.Types.Int, GHC.Types.Int))
+                   (w2 :: GHC.Types.Int) ->
+                 case w1 of ww { (,) ww1 ww2 -> Solver.$wreplace w ww1 ww2 w2 }) -}
+5f3b0a9d9090207edf3a78124c67bc3c
+  replace1 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.eftInt 0# 9223372036854775807#) -}
+2ce87ca627c135cabe494ab7b96b2fc4
+  showCell :: GHC.Base.Maybe GHC.Types.Int -> GHC.Types.Char
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Base.Maybe GHC.Types.Int) ->
+                 case ds of wild {
+                   GHC.Base.Nothing -> Solver.showCell1
+                   GHC.Base.Just n -> GHC.Show.intToDigit n }) -}
+412a759e6332c8cbfd584c7636b71578
+  showCell1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '_'#) -}
+3bfab720487405972a2271c52615815f
+  showLine :: [GHC.Base.Maybe GHC.Types.Int] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (line :: [GHC.Base.Maybe GHC.Types.Int]) ->
+                 case GHC.Base.map
+                        @ (GHC.Base.Maybe GHC.Types.Int)
+                        @ GHC.Types.Char
+                        Solver.showCell
+                        line of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        x
+                        (Data.OldList.prependToAll
+                           @ GHC.Types.Char
+                           Solver.showLine1
+                           xs) }) -}
+389441c82ec9a80270ef3437f9f5b3e1
+  showLine1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+45e7d33dce60ce52714b3290d935ebaa
+  solve :: Solver.Puzzle -> GHC.Base.Maybe Solver.Puzzle
+  {- Arity: 1, Strictness: <L,U> -}
+87673cbdc83bff7870d04976057a91f2
+  solveFromFile :: GHC.Types.IO Solver.Puzzle
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Solver.solveFromFile1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Solver.Puzzle>_R)) -}
+253a3988fce63b4d8ea76d0f7e28ad64
+  solveFromFile1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Solver.Puzzle #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Solver.parse2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv2 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv2
+                        ipv of ds2 { (#,#) ipv1 ipv3 ->
+                 let {
+                   ipv4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+                   = GHC.Base.build
+                       @ [GHC.Base.Maybe GHC.Types.Int]
+                       (\ @ b1
+                          (c :: [GHC.Base.Maybe GHC.Types.Int] -> b1 -> b1)[OneShot]
+                          (n :: b1)[OneShot] ->
+                        GHC.Base.foldr
+                          @ [GHC.Types.Char]
+                          @ b1
+                          (GHC.Base.mapFB
+                             @ [GHC.Base.Maybe GHC.Types.Int]
+                             @ b1
+                             @ [GHC.Types.Char]
+                             c
+                             Solver.convert)
+                          n
+                          (Data.OldList.lines ipv3))
+                 } in
+                 (# ipv1,
+                    case Solver.solve ipv4 `cast` (Sym (Solver.N:Puzzle[0])) of wild {
+                      GHC.Base.Nothing -> ipv4 `cast` (Sym (Solver.N:Puzzle[0]))
+                      GHC.Base.Just p -> p } #) } }) -}
+38b946650c2960df912a93f45d797b13
+  usedInCol ::
+    [[GHC.Base.Maybe GHC.Types.Int]]
+    -> GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (grid :: [[GHC.Base.Maybe GHC.Types.Int]])
+                   (x :: GHC.Types.Int) ->
+                 Data.Maybe.catMaybes1
+                   @ GHC.Types.Int
+                   (GHC.Base.build
+                      @ (GHC.Base.Maybe GHC.Types.Int)
+                      (\ @ b1
+                         (c :: GHC.Base.Maybe GHC.Types.Int -> b1 -> b1)[OneShot]
+                         (n :: b1)[OneShot] ->
+                       GHC.Base.foldr
+                         @ [GHC.Base.Maybe GHC.Types.Int]
+                         @ b1
+                         (GHC.Base.mapFB
+                            @ (GHC.Base.Maybe GHC.Types.Int)
+                            @ b1
+                            @ [GHC.Base.Maybe GHC.Types.Int]
+                            c
+                            (\ (l :: [GHC.Base.Maybe GHC.Types.Int]) ->
+                             GHC.List.!! @ (GHC.Base.Maybe GHC.Types.Int) l x))
+                         n
+                         grid))) -}
+6293fbb67f5fc1d55ddb7f6ed9fdf1b7
+  usedInQuad ::
+    Solver.Puzzle -> (GHC.Types.Int, GHC.Types.Int) -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <L,U><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Solver.Puzzle) (w1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Solver.$wusedInQuad w ww4 ww2 } }) -}
+4d02d87bae65085dfbaf25c497e637a4
+  usedInRow ::
+    [[GHC.Base.Maybe GHC.Types.Int]]
+    -> GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S,1*U><S(S),1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (grid :: [[GHC.Base.Maybe GHC.Types.Int]])
+                   (y :: GHC.Types.Int) ->
+                 case y of ww { GHC.Types.I# ww1 ->
+                 Data.Maybe.catMaybes1
+                   @ GHC.Types.Int
+                   (GHC.List.$w!! @ [GHC.Base.Maybe GHC.Types.Int] grid ww1) }) -}
+9a156c5b41cfbd00ea70b5903b6e2be5
+  valueAt ::
+    Solver.Puzzle
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 2, Strictness: <L,1*U><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Solver.Puzzle) (w1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Solver.$wvalueAt w ww4 ww2 } }) -}
+instance [safe] GHC.Show.Show [Solver.Puzzle] = Solver.$fShowPuzzle
+"SPEC/Solver $wsplitS @ Int" [orphan] [0] forall (w :: GHC.Classes.Ord
+                                                         GHC.Types.Int)
+  Data.Set.Internal.$wsplitS @ GHC.Types.Int w = Solver.$s$wsplitS
+"SPEC/Solver difference @ Int" [orphan] forall ($dOrd :: GHC.Classes.Ord
+                                                           GHC.Types.Int)
+  Data.Set.Internal.difference @ GHC.Types.Int $dOrd
+  = Solver.$sdifference
+"SPEC/Solver fromList @ Int" [orphan] forall ($dOrd :: GHC.Classes.Ord
+                                                         GHC.Types.Int)
+  Data.Set.Internal.fromList @ GHC.Types.Int $dOrd
+  = Solver.$sfromList
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
