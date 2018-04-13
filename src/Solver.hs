@@ -6,20 +6,6 @@ import Data.Maybe
 import Data.Set (Set)
 import qualified Data.Set as Set
 
-testPuzzle :: Puzzle
-testPuzzle =
-  Puzzle $ 
-    [ [ Just 5, Just 1, Nothing, Nothing, Just 6, Just 3, Nothing, Just 9, Just 7 ]
-    , [ Nothing, Nothing, Just 8, Just 9, Nothing, Nothing, Just 2, Just 6, Nothing ]
-    , [ Just 6, Nothing, Just 9, Nothing, Nothing, Nothing, Nothing, Just 3, Nothing ]
-    , [ Nothing, Just 9, Just 6, Just 7, Just 2, Just 1, Nothing, Nothing, Nothing ]
-    , [ Nothing, Just 7, Nothing, Just 6, Nothing, Just 8, Nothing, Just 4, Nothing ]
-    , [ Nothing, Nothing, Nothing, Just 5, Just 3, Just 4, Just 9, Just 7, Nothing ]
-    , [ Nothing, Just 5, Nothing, Nothing, Nothing, Nothing, Just 7, Nothing, Just 3 ]
-    , [ Nothing, Just 6, Just 3, Nothing, Nothing, Just 9, Just 5, Nothing, Nothing ]
-    , [ Just 1, Just 4, Nothing, Just 3, Just 5, Nothing, Nothing, Just 8, Just 9 ]
-    ]
-
 allValues :: Set Int 
 allValues =
   Set.fromList [1..9]
@@ -98,19 +84,16 @@ firstBlank puzzle =
     [] -> Nothing
     (x:xs) -> Just x
 
-depipe line =
-  filter (\c -> c /= '|') line
-
 convert =
   fmap 
     (\c ->
       case c of
-        '_' -> Nothing
+        '.' -> Nothing
         _ -> Just (digitToInt c))
 
 parse = do
   d <- readFile "data/puzzle.txt"
-  return $ Puzzle $ (convert . depipe) <$> lines d
+  return $ Puzzle $ convert <$> lines d
 
 solveFromFile = do
   puzzle <- parse
